@@ -1,0 +1,74 @@
+@import './variables';
+@import './mixins';
+
+.btn {
+  display: inline-block;
+  border-radius: $br-lg;
+
+  background-color: $accent;
+  padding: 0.6em 1.6em;
+  border: 1px solid $accent;
+  box-shadow: $button-shadow;
+
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+}
+
+.btn-sec {
+  background-color: transparent;
+  color: $font-primary;
+  transform-origin: left;
+  transition: background-color 200ms ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+.btn:focus {
+  outline: 1px solid $accent;
+  outline-offset: 2px;
+}
+
+.btn-tertiary {
+  background: none;
+  border: none;
+  color: $accent-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.7rem;
+  span {
+    margin-right: 1.5rem;
+  }
+  svg {
+    width: 3rem;
+    transition: transform 200ms ease-in-out;
+  }
+}
+.btn-tertiary:hover {
+  svg {
+    transform: scaleX(1.25) translateX(0.4rem);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $font-primary;
+}
+a:focus {
+  outline: 1px solid $accent;
+  outline-offset: 2px;
+}
+p {
+  color: $font-paragraph;
+  @include mq-min($v-6) {
+  }
+}

@@ -1,0 +1,15 @@
+@import './variables';
+@import './mixins';
+
+.spacing > * + * {
+  margin-top: $spacer, 2.5rem;
+}
+
+.container {
+  width: 85%;
+  max-width: 125rem;
+  margin: 0 auto;
+  @include mq-max($v-8) {
+    width: 90%;
+  }
+}

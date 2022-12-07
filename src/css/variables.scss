@@ -1,0 +1,78 @@
+// Portfolio specific variables
+$neutral-200: #183668;
+$neutral-300: #173058;
+$neutral-400: #142849;
+$neutral-500: #152644;
+$neutral-600: #0f213d;
+$neutral-700: #0c1c35;
+$neutral-800: #040f22;
+
+$accent: #1543da;
+$accent-2: #09dbc3;
+
+$font-primary: #e5e7ec;
+$font-paragraph: #8cb3ff;
+$font-secondary: #020914;
+
+$br-sm: 0.5rem;
+$br-md: 1rem;
+$br-lg: 2rem;
+
+$input-shadow: inset 0 2px 3px;
+$button-shadow: 0 2px 3px;
+
+$shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.2);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+$shadow-lg: 0 5px 30px rgba(0, 0, 0, 0.1);
+
+$in-out-sine: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+
+$s-10: 1rem;
+$s-14: 1.4rem;
+$s-18: 1.8rem;
+$s-20: 2rem;
+$s-24: 2.4rem;
+$s-28: 2.8rem;
+$s-32: 3.2rem;
+$s-36: 3.6rem;
+$s-42: 4.2rem;
+$s-64: 6.4rem;
+
+$v-25: 156.25em; // 2500px
+$v-20: 125em; // 2000px
+$v-17: 105em; // 1680px
+$v-14: 85.375em; //1366px
+$v-12: 75em; //1200px
+$v-10: 62.5em; //1000px
+$v-9: 56.25em; //900px
+$v-8: 48em; // 768px
+$v-6: 35.5em; //568px
+$v-3: 22.5em; //360px
+
+$spacer: 7.5rem;
+
+.light-mode {
+  $primary-200: #303fdd;
+  $primary-300: #4a55cc;
+  $primary-400: #1546e6;
+  $primary-500: #1f2fdf;
+  $primary-600: #1926bb;
+
+  $neutral-200: #d8e6f3;
+  $neutral-300: #fcfcfd;
+
+  $neutral-400: #fcfcfd;
+  $neutral-500: #e4eef6;
+  $neutral-600: #f1f5f8;
+  $neutral-700: #dae4ee;
+
+  $tertiary: #5859c6;
+
+  $accent: #1543da;
+  $accent-2: #017a74;
+
+  $white: #fff;
+  $font-primary: #10203b;
+  $font-paragraph: #39485f;
+  $font-secondary: #e5e7ec;
+}

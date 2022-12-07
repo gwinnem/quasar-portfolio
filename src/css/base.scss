@@ -1,0 +1,38 @@
+@import './variables';
+@import './mixins';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include mq-min($v-20) {
+    font-size: 70%;
+  }
+  @include mq-min($v-25) {
+    font-size: 85%;
+  }
+
+  @include mq-max($v-12) {
+    font-size: 57.5%;
+  }
+
+  @include mq-max($v-8) {
+    font-size: 55%;
+  }
+  @include mq-max($v-6) {
+    font-size: 47.5%;
+  }
+  @include mq-max($v-3) {
+    font-size: 45%;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: $font-primary;
+  background-color: $neutral-400;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
