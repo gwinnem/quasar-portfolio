@@ -1,4 +1,4 @@
-import IProject from "src/core/interfaces/IProjects.interface";
+import IProject from 'src/core/interfaces/IProjects.interface';
 
 export const projectList: IProject[] = [
   {
@@ -19,8 +19,7 @@ export const projectList: IProject[] = [
   },
   {
     title: 'Vue Dashboard Layout',
-    paragraph:
-      'npm package used for building interactive dashboards.',
+    paragraph: 'npm package used for building interactive dashboards.',
     link: 'https://github.com/gwinnem/vue-dashboard-layout',
     class: 'project-one',
   },
