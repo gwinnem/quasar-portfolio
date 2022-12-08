@@ -4,9 +4,9 @@
       <section id="home">
         <LandingComponent />
       </section>
-      <!--      <section id="projects">-->
-      <!--        <ProjectComponent />-->
-      <!--      </section>-->
+            <section id="projects">
+              <ProjectComponent />
+            </section>
       <section id="skills">
         <SkillsComponent />
       </section>
@@ -26,7 +26,7 @@
 
 <script lang="ts" setup>
 import LandingComponent from 'components/landing/LandingComponent.vue';
-// import ProjectComponent from 'components/landing/ProjectsComponent.vue';
+import ProjectComponent from 'components/landing/ProjectsComponent.vue';
 import SkillsComponent from 'components/landing/SkillsComponent.vue';
 import ContactMeComponent from 'components/landing/ContactMeComponent.vue';
 </script>
@@ -38,7 +38,7 @@ import ContactMeComponent from 'components/landing/ContactMeComponent.vue';
   background-color: $neutral-400;
 }
 
-#work,
+#projects,
 #skills,
 #contact {
   padding: 5rem 0;
@@ -47,12 +47,12 @@ import ContactMeComponent from 'components/landing/ContactMeComponent.vue';
   }
 }
 
-#work,
+#projects,
 #contact {
-  background-color: $neutral-400;
+  background-color: $neutral-600;
 }
 
 #skills {
-  background-color: $neutral-600;
+  background-color: $neutral-400;
 }
 </style>

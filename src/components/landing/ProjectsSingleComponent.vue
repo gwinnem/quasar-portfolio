@@ -20,8 +20,8 @@
         </svg>
       </a>
     </div>
-    <a class="project-image" :href="props.project.link" target="_blank">
-      <img :src="props.project.imgSrc" alt="Project" />
+    <a v-if="props.project.link !== undefined && props.project.link !== ''" class="project-image" :href="props.project.link" target="_blank">
+      <img v-if="props.project.imgSrc !== undefined && props.project.imgSrc !== ''" :src="props.project.imgSrc" alt="Project" />
     </a>
   </article>
 </template>
@@ -42,6 +42,7 @@ const props = defineProps({
 @import '../../css/app';
 
 .project {
+  margin-bottom: 3rem;
   z-index: 1;
 
   text-align: center;
@@ -56,6 +57,7 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: left;
     @include mq-min($v-12) {
       align-items: flex-start;
     }
@@ -79,8 +81,7 @@ const props = defineProps({
     }
   }
   .btn {
-    margin: 0 auto;
-    margin-bottom: $s-32;
+    margin: 0 auto $s-32;
     box-shadow: none;
     @include mq-min($v-12) {
       margin-left: 0;
