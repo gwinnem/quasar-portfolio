@@ -20,8 +20,17 @@
         </svg>
       </a>
     </div>
-    <a v-if="props.project.link !== undefined && props.project.link !== ''" class="project-image" :href="props.project.link" target="_blank">
-      <img v-if="props.project.imgSrc !== undefined && props.project.imgSrc !== ''" :src="props.project.imgSrc" alt="Project" />
+    <a
+      v-if="props.project.link !== undefined && props.project.link !== ''"
+      class="project-image"
+      :href="props.project.link"
+      target="_blank"
+    >
+      <img
+        v-if="props.project.imgSrc !== undefined && props.project.imgSrc !== ''"
+        :src="props.project.imgSrc"
+        alt="Project"
+      />
     </a>
   </article>
 </template>

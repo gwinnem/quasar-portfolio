@@ -4,7 +4,6 @@ Portfolio Website for Geirr Winnem
 
 [Forked from Ivancic Josip vue project](https://github.com/josip2312/vue3-portfolio)
 
-
 Part of the HomePage
 <img src="./docs/images/HomePage.png" />
 

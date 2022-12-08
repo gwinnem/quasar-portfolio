@@ -110,64 +110,59 @@ import Loader from '../shared/LoaderComponent.vue';
 
 import { reactive, ref } from 'vue';
 import axios from 'axios';
-    const form = reactive({
-      name: '',
-      email: '',
-      message: '',
-    });
-    const modalContent = reactive({
-      title: 'title',
-      message: 'message',
-    });
-    const isLoading = ref(false);
-    const isModalVisible = ref(false);
-    const hideModal = () => {
-      isModalVisible.value = false;
-    };
+const form = reactive({
+  name: '',
+  email: '',
+  message: '',
+});
+const modalContent = reactive({
+  title: 'title',
+  message: 'message',
+});
+const isLoading = ref(false);
+const isModalVisible = ref(false);
+const hideModal = () => {
+  isModalVisible.value = false;
+};
 
-    const encode = (data) => {
-      return Object.keys(data)
-        .map(
-          (key) =>
-            `${encodeURIComponent(key)}=${encodeURIComponent(
-              data[key],
-            )}`,
-        )
-        .join('&');
-    };
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+};
 
-    const handleSubmit = async () => {
-      const axiosConfig = {
-        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      };
-      try {
-        isLoading.value = true;
-        await axios.post(
-          '/',
-          encode({
-            'form-name': 'contact-form',
-            ...form,
-          }),
-          axiosConfig,
-        );
-        isLoading.value = false;
-        modalContent.title = 'Success';
-        modalContent.message =
-          'The message has been sent successfully. Thank you for contacting me.';
-        isModalVisible.value = true;
-      } catch (error) {
-        isLoading.value = false;
-        modalContent.title = 'Whoops!';
-        modalContent.message =
-          'Something went wrong! Please try sending the message again.';
-        isModalVisible.value = true;
-        console.error(error);
-      }
-    };
+const handleSubmit = async () => {
+  const axiosConfig = {
+    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  };
+  try {
+    isLoading.value = true;
+    await axios.post(
+      '/',
+      encode({
+        'form-name': 'contact-form',
+        ...form,
+      }),
+      axiosConfig
+    );
+    isLoading.value = false;
+    modalContent.title = 'Success';
+    modalContent.message =
+      'The message has been sent successfully. Thank you for contacting me.';
+    isModalVisible.value = true;
+  } catch (error) {
+    isLoading.value = false;
+    modalContent.title = 'Whoops!';
+    modalContent.message =
+      'Something went wrong! Please try sending the message again.';
+    isModalVisible.value = true;
+    console.error(error);
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-@import "../../css/app";
+@import '../../css/app';
 
 .container {
   display: flex;
@@ -264,7 +259,7 @@ import axios from 'axios';
       background-color: $neutral-700;
       margin-bottom: $s-20;
       box-shadow: 0 2px 0 hsla(0, 0%, 50%, 0.15),
-      inset 0 2px 2px hsla(0, 0%, 0%, 0.15);
+        inset 0 2px 2px hsla(0, 0%, 0%, 0.15);
     }
 
     input:focus,
@@ -291,7 +286,7 @@ import axios from 'axios';
   input,
   textarea {
     box-shadow: 0 2px 0 hsla(0, 0%, 100%, 0.15),
-    inset 0 1px 2px hsla(0, 0%, 0%, 0.15) !important;
+      inset 0 1px 2px hsla(0, 0%, 0%, 0.15) !important;
   }
 }
 </style>

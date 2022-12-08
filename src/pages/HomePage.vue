@@ -4,9 +4,9 @@
       <section id="home">
         <LandingComponent />
       </section>
-            <section id="projects">
-              <ProjectComponent />
-            </section>
+      <section id="projects">
+        <ProjectComponent />
+      </section>
       <section id="skills">
         <SkillsComponent />
       </section>

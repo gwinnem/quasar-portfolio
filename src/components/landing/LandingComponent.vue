@@ -15,13 +15,15 @@
           rounded
           class="btn btn-sec"
           href="#skills"
-          label="See My Skills" />
+          label="See My Skills"
+        />
         <q-btn
           outline
           rounded
           class="btn btn-sec"
           href="#contact"
-          label="Contact Me" />
+          label="Contact Me"
+        />
       </div>
     </div>
     <div class="showcase-image">

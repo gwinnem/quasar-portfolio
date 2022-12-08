@@ -2,17 +2,17 @@
   <footer class="footer">
     <div class="footer-social">
       <a href="https://github.com/gwinnem" target="_blank" class="about-link">
-        <q-icon size="22px" name="fa-brands fa-github"/>
+        <q-icon size="22px" name="fa-brands fa-github" />
       </a>
       <a
         href="https://www.linkedin.com/in/gwinnem"
         target="_blank"
         class="about-link"
       >
-        <q-icon size="22px" name="fa-brands fa-linkedin-in"/>
+        <q-icon size="22px" name="fa-brands fa-linkedin-in" />
       </a>
       <a href="https://twitter.com/gwinnem" target="_blank" class="about-link">
-        <q-icon size="22px" name="fa-brands fa-twitter"/>
+        <q-icon size="22px" name="fa-brands fa-twitter" />
       </a>
     </div>
     <p class="footer-copyright">Developed by Geirr Winnem</p>
