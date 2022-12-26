@@ -5,7 +5,7 @@
       <div class="projects">
         <div class="projects spacing">
           <ProjectPreview
-            v-for="(project, index) in projects"
+            v-for="(project, index) in projectList"
             :key="index"
             :project="project"
           />
@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 import ProjectPreview from 'components/landing/ProjectsSingleComponent.vue';
-import { projects } from '../core/data/projects';
+import { projectList } from '../core/data/projects';
 </script>
 
 <style lang="scss" scoped>

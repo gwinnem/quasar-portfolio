@@ -7,9 +7,16 @@
       <p class="desc">
         Hi, I'm a <span>Full Stack Developer</span> passionate about writing
         quality and reusable code. Love developing with C# and Typescript.
+        Working @ <a href="https://www.ringana.com" target="_blank">RINGANA</a>.
       </p>
       <div class="buttons">
-        <!--        <a class="btn btn-sec" href="#projects">See my projects</a>-->
+        <q-btn
+          outline
+          rounded
+          class="btn btn-sec"
+          href="#projects"
+          label="See my projects"
+        />
         <q-btn
           outline
           rounded

@@ -12,14 +12,23 @@ export const projectList: IProject[] = [
   {
     title: 'Vue Virtual Keyboard Docs',
     paragraph:
-      'Documentation and Demos for the vue-virtual-keyboard, built with Quasar.',
-    imgSrc: '../assets/images/dark-mode-keyboard.png',
+      'Documentation and Demos for the npm package vue-virtual-keyboard, built with Quasar.',
+    imgSrc: '../assets/images/vue-virtual-keyboard-docs.png',
     link: 'https://github.com/gwinnem/vue-virtual-keyboard-quasar',
     class: 'project-one',
   },
   {
     title: 'Vue Dashboard Layout',
     paragraph: 'npm package used for building interactive dashboards.',
+    imgSrc: '../assets/images/dashboard-layout.png',
+    link: 'https://github.com/gwinnem/vue-dashboard-layout',
+    class: 'project-one',
+  },
+  {
+    title: 'Vue Dashboard Layout Docs',
+    paragraph:
+      'Documentation and Demos for the npm package vue-dashboard-layout, built with Quasar.',
+    imgSrc: '../assets/images/vue-virtual-keyboard-docs.png',
     link: 'https://github.com/gwinnem/vue-dashboard-layout',
     class: 'project-one',
   },

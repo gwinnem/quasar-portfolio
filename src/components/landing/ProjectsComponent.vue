@@ -9,9 +9,9 @@
         :project="project"
       />
     </div>
-    <router-link :to="{ name: 'Projects' }" class="btn btn-main">
-      See more projects
-    </router-link>
+    <!--    <router-link :to="{ name: 'Projects' }" class="btn btn-main">-->
+    <!--      See more projects-->
+    <!--    </router-link>-->
   </div>
 </template>
 
