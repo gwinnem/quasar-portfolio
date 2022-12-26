@@ -49,6 +49,13 @@
           >
             Twitter
           </a>
+          <a
+            href="https://www.xing.com/profile/Geirr_Winnem/cv"
+            target="_blank"
+            class="about-link"
+          >
+            Xing
+          </a>
         </div>
       </div>
     </div>
