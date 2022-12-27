@@ -42,8 +42,6 @@
       class="contact-form"
       name="contact-form"
       method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
       @submit.prevent="handleSubmit"
     >
       <div class="form-top">
