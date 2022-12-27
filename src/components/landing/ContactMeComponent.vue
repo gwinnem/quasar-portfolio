@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <form
+    <q-form
       data-aos="fade-up"
       class="contact-form"
       name="contact-form"
@@ -88,7 +88,7 @@
           <img src="/assets/icons/send.svg" alt="Send icon" />
         </q-btn>
       </div>
-    </form>
+    </q-form>
   </div>
   <Loader :isLoading="isLoading" />
   <FormModal
@@ -99,13 +99,13 @@
 </template>
 
 <script setup>
-// TODO add lang = ts
-
 import FormModal from '../shared/FormModalComponent.vue';
 import Loader from '../shared/LoaderComponent.vue';
-
 import { reactive, ref } from 'vue';
 import axios from 'axios';
+
+// TODO add lang = ts
+
 const form = reactive({
   name: '',
   email: '',
@@ -121,31 +121,30 @@ const hideModal = () => {
   isModalVisible.value = false;
 };
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
-};
-
 const handleSubmit = async () => {
-  const axiosConfig = {
-    header: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  };
+
   try {
+
+    const API_KEY = "your-mailslurp-api-key";
     isLoading.value = true;
-    await axios.post(
-      '/',
-      encode({
-        'form-name': 'contact-form',
-        ...form,
-      }),
-      axiosConfig
-    );
+    await axios({
+      method: 'POST',
+      url: `https://api.mailslurp.com/sendEmail?apiKey=${API_KEY}`,
+      data: {
+        senderId: 'your-sender-id',
+        // senderId: `your-mailslurp inbox id`,
+        to: 'your email',
+        subject: `Email from ${form.name} ${form.email}`,
+        body: form.message,
+      },
+    });
     isLoading.value = false;
     modalContent.title = 'Success';
-    modalContent.message =
-      'The message has been sent successfully. Thank you for contacting me.';
+    modalContent.message = `Thank you for contacting me ${form.name}.`;
     isModalVisible.value = true;
+    form.name = '';
+    form.email = '';
+    form.message = '';
   } catch (error) {
     isLoading.value = false;
     modalContent.title = 'Whoops!';
